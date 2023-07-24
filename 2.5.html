@@ -29,7 +29,7 @@
     }
     numberString(8);
     numberString(3);
-    
+
 //task 3
     function squareNumber(a) {
         const Number=Math.pow(a,2);
@@ -59,6 +59,22 @@ function age() {
     }
 }
 age();
+//task5
+function multiplyNumbers(a, b) {
+  //Проверить числа ли
+  if (isNaN(a) || isNaN(b)) {
+    return 'Одно или оба значения не являются числом';
+  }
+  
+  // Если оба параметра - числа, вернуть их произведение
+  return a * b;
+}
+
+// Примеры использования функции
+console.log(multiplyNumbers(5, 3)); // 15
+console.log(multiplyNumbers('ляляля', 3)); // Одно или оба значения не являются числом
+console.log(multiplyNumbers(2, 'жужужу')); // Одно или оба значения не являются числом
+console.log(multiplyNumbers(3,2));
 </script>
 </body>
 </html>
