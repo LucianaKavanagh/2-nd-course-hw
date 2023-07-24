@@ -29,6 +29,7 @@
     }
     numberString(8);
     numberString(3);
+    
 //task 3
     function squareNumber(a) {
         const Number=Math.pow(a,2);
@@ -43,6 +44,21 @@
     }
     squareNumber(3);
     squareNumber(4);
+
+//task4
+function age() {
+    let answer=Number(prompt(`Сколько тебе лет, дружбанчик?`));
+    if (answer>0 && answer<12) {
+        alert(`Привет, друг!`);
+    } 
+    else if (answer===13 || answer>13) {
+        alert(`Добро пожаловать!`);
+    }
+    else {
+        alert (`Вы ввели неправильное значение`);
+    }
+}
+age();
 </script>
 </body>
 </html>
