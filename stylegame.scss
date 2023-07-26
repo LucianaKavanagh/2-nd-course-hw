@@ -12,21 +12,18 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    
-    &__head {
-        
-        padding-top: 217.1px;
+    &__head { 
+    padding-top: 217.1px;
     padding-left: 120.22px;
     }
-    &__header {
-        width: 788.78px;       
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 700;
-font-size: 64px;
-line-height: 78px;
-color: #FFFFFF;
-padding-bottom: 32px;
+    &__header {     
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 78px;
+    color: #FFFFFF;
+    padding-bottom: 32px;
     }
     &__introduction {
         width: 481px;
@@ -153,6 +150,10 @@ height: 800px;
         padding-top: 282px;
         justify-items: end;
     }
+    &__union {
+        display: flex;
+        flex-direction: column;
+    }
     &__introduction {
         width: 584px;
     height: 64px;
@@ -195,6 +196,7 @@ color: #FFFFFF;
 
    }
 }
+
 .footer_three {
     height: 800px;
         background-color:#000915;
@@ -212,12 +214,17 @@ color: #FFFFFF;
         color: #FFFFFF;
         padding-bottom: 32px;
         }
+      
         &__head {    
             gap: 150.2px;
             display: flex;
             padding-top: 282px;
             flex-direction: row-reverse;
             justify-content: center;
+        }
+        &__three__union {
+            display: flex;
+            flex-direction: column;
         }
         &__introduction {
             width: 584px;
