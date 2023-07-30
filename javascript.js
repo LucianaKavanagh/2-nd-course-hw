@@ -1,4 +1,4 @@
-
+document.styleSheets[0].disabled = true;
 function Season() {
   let number=Number(prompt(`Введите номер месяца`));
   if (number===12 || number===1 || number===2) {

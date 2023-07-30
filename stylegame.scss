@@ -1,13 +1,13 @@
 * {
     margin: 0;
     padding: 0;
-    
 }
 
 body {
     font-family: "Montserrat", sans-serif;
 }
 .top {
+    
     background-image: url(image/fon.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -24,6 +24,7 @@ body {
     line-height: 78px;
     color: #FFFFFF;
     padding-bottom: 32px;
+    align-items: center;
     }
     &__introduction {
         width: 481px;
@@ -62,6 +63,7 @@ margin-bottom: 493px;
 }
 }
 .footer {
+
     background-color: #000915;
     display: flex;
     gap: 32px;

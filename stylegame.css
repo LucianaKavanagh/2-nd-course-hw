@@ -25,6 +25,7 @@ body {
   line-height: 78px;
   color: #FFFFFF;
   padding-bottom: 32px;
+  align-items: center;
 }
 .top__introduction {
   width: 481px;
