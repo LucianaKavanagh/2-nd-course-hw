@@ -104,6 +104,18 @@ return lengths;
 let words = ["mau", "mrrrr", "miumiumiu"];
 let lengths = wordLengths(words);
 console.log(lengths);
+//13
+function filterPositive(arrayThirteen) {
+let result = [];
+for (let i = 0; i < arrayThirteen.length; i++) {
+if (arrayThirteen[i] < 0) {
+result.push(arrayThirteen[i]);
+}
+}
+return result;
+}
+console.log(filterPositive([-1, 0, 5, -10, 56])); // [-1, -10]
+console.log(filterPositive([-25, 25, 0, -1000, -2])); // [-25, -1000, -2]
 </script>
 </body>
 </html>
