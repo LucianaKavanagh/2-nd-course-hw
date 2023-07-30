@@ -82,6 +82,17 @@ for (let i = 0; i < numbers.length - 1; i++) {
 let sumOfElements = numbers[i] + numbers[i + 1];
 console.log(sumOfElements);
 }
+//11
+function squareArray(numbers) {
+let squaredNumbers = [];
+for (let i = 0; i < numbers.length; i++) {
+squaredNumbers.push(numbers[i] * numbers[i]);
+}
+return squaredNumbers;
+}
+let numbersEleven = [1, 2, 3, 4, 5];
+let squaredNumbers = squareArray(numbersEleven);
+console.log(squaredNumbers);
 </script>
 </body>
 </html>
