@@ -47,6 +47,15 @@ arrSix = arrSix.filter(function(elem) {
     return typeof elem === 'number';
 });
 console.log(arrSix);
+//7
+let arrEight = [9, 8, 7, 6, 5];
+let userNumber = parseInt(prompt("Угадайте число:"));
+
+if (arrEight.includes(userNumber)) {
+    alert("Угадал");
+} else {
+    alert("Не угадал");
+}
 </script>
 </body>
 </html>
