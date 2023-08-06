@@ -83,6 +83,27 @@ console.log(formattedDate);
 const currtDate = new Date();
 const futureDate = new Date(currtDate.getTime() + (73 * 24 * 60 * 60 * 1000));
 console.log(futureDate);
+//10
+function formatDate(date) {
+  const weekdays = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+  
+  // редактирование даты
+  const options = { day: 'numeric', month: 'long', year: 'numeric' };
+  const formattedDate = date.toLocaleDateString('ru-RU', options);
+  
+  // редактирование времени
+  const hours = String(date.getHours()).padStart(2, '0');
+  const minutes = String(date.getMinutes()).padStart(2, '0');
+  const seconds = String(date.getSeconds()).padStart(2, '0');
+  const formattedTime = `${hours}:${minutes}:${seconds}`;
+  
+  // возвращение новой даты и времени
+  const dayOfWeek = weekdays[date.getDay()];
+  return `Дата: ${formattedDate} - это ${dayOfWeek}\nВремя: ${formattedTime}`;
+}
+const date = new Date();
+const formattedDateTime = formatDate(date);
+console.log(formattedDateTime);
     </script>
 </body>
 </html>
