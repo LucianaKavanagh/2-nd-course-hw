@@ -67,6 +67,14 @@ function randomNumbersArray(n) {
 const input = 7;
 const output = randomNumbersArray(input);
 console.log(output);
+//7
+function getRandomInteger(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+console.log(getRandomInteger(3, 15));
+console.log(getRandomInteger(-20, 0));
     </script>
 </body>
 </html>
