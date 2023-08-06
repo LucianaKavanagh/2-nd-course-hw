@@ -10,6 +10,22 @@
         //1
 const phrase=('кошечка умывается лапкой').toLocaleUpperCase();
 console.log(phrase);
+//2
+function filterByPrefix(array, prefix) {
+let result = [];
+prefix = prefix.toLowerCase();
+for (let i = 0; i < array.length; i++) {
+let lowerCaseStr = array[i].toLowerCase();
+if (lowerCaseStr.startsWith(prefix)) {
+result.push(array[i]);
+}
+}
+return result;
+}
+let animals = ['Horses', 'Lioness', 'Tigress', 'Elephant', 'Tapir'];
+let filteredAnimals = filterByPrefix(animals, 't');
+
+console.log(filteredAnimals);
     </script>
 </body>
 </html>
