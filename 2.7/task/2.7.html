@@ -104,6 +104,24 @@ function formatDate(date) {
 const date = new Date();
 const formattedDateTime = formatDate(date);
 console.log(formattedDateTime);
+//task11 задача из вёрстки
+function gameTwo() {
+  let arr = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+
+arr = arr.sort(() => Math.random() - 0.5);
+alert(arr);
+let questionOne = prompt(`Какой первый фрукт?`);
+let questionTwo = prompt(`Какой последний фрукт?`);
+if (questionOne===arr[0] && questionTwo=== arr[arr.length - 1]) {
+  alert(`Аплодисменты, ты супер-пупер!`);
+} 
+else if (questionOne === arr[0] || questionTwo === arr[arr.length - 1]) {
+  alert(`Вы были близки`);
+}
+else {
+alert(`Не угадал, попробуй ещё`); 
+}
+}
     </script>
 </body>
 </html>
