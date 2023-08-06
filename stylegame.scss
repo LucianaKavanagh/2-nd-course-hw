@@ -1,21 +1,28 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    font-family: "Montserrat", sans-serif;
+  }
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+
+  }
 .top {
     background-image: url(image/fon.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     &__head { 
-    padding-top: 217.1px;
-    padding-left: 120.22px;
     justify-content: center;
     flex-direction: column;
     }
-    &__header {     
+    &__header {    
+    padding-top: 217px; 
     font-style: normal;
     font-weight: 700;
     font-size: 64px;
@@ -23,12 +30,10 @@
     color: #FFFFFF;
     padding-bottom: 32px;
     align-items: center;
-    width: 758.78px;
-    height: 125.01px;
+    
 
     }
     &__introduction {
-        width: 481px;
         font-style: normal;
 font-weight: 300;
 font-size: 18px;
@@ -131,10 +136,6 @@ margin-bottom: 493px;
 .footer_two {
 height: 800px;
     background-color:#000915;
-    &__union {
-        grid-column: span 6;
-
-    }
     &__header {
     height: 59px;
     font-family: 'Montserrat';
@@ -151,13 +152,13 @@ height: 800px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding-top: 233px;
         gap: 123px;
         
     }
     &__union {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
     &__introduction {
         width: 584px;
@@ -167,10 +168,9 @@ height: 800px;
     font-weight: 300;
     font-size: 18px;
     line-height: 32px;
-    display: flex;
-    align-items: center;
     color: #FFFFFF;
     padding-bottom: 32px;
+    text-align: center;
     }
    &__button {
     left: 70.47px;
@@ -203,11 +203,8 @@ color: #FFFFFF;
 }
 
 .footer_three {
-    height: 800px;
     background-color:#000915;
-    &__union {
-        grid-column: span 6;
-
+    height: 800px;
     }
     &__header {
     height: 59px;
@@ -225,7 +222,6 @@ color: #FFFFFF;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding-top: 233px;
         gap: 123px;
         flex-direction: row-reverse;
         
@@ -275,6 +271,5 @@ color: #FFFFFF;
     grid-column-end: span 13;
 
    } 
-    }
 
 @import "mobilegame";
