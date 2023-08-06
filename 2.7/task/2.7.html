@@ -53,7 +53,17 @@ function randomNumber() {
   console.log(random);
 }
 randomNumber();
+//6
+function randomNumbersArray(n) {
+  const result = [];
 
+  for (let i = 0; i < n / 2; i++) {
+    const random = Math.floor(Math.random() * (n + 1));
+    result.push(random);
+  }
+
+  return result;
+}
     </script>
 </body>
 </html>
