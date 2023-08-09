@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+//task 1
+    function min(a,b) {
+        if (a>b) {
+            return b;
+        } else {
+           return a; 
+        };
+    }
+    console.log(min(8,4));
+    console.log(min(6,6));
+    console.log(min(3,10));
+//task2
+    function numberString (a) {
+    if (a% 2 == 0) {
+    console.log("Число чётное");
+    } else {
+    console.log("Число нечётное");
+    }
+    }
+    numberString(8);
+    numberString(3);
+
+//task 3
+    function squareNumber(a) {
+        const Number=Math.pow(a,2);
+        console.log(Number);
+    }
+    squareNumber(5);
+    squareNumber(456);
+
+    function squareNumberTwo(a) {
+        const Number=Math.pow(a,2);
+        return (Number);
+    }
+    squareNumber(3);
+    squareNumber(4);
+
+//task4
+function age() {
+    let answer=Number(prompt(`Сколько тебе лет, дружбанчик?`));
+    if (answer>0 && answer<12) {
+        alert(`Привет, друг!`);
+    } 
+    else if (answer===13 || answer>13) {
+        alert(`Добро пожаловать!`);
+    }
+    else {
+        alert (`Вы ввели неправильное значение`);
+    }
+}
+age();
+//task5
+function multiplyNumbers(a, b) {
+  //Проверить числа ли
+  if (isNaN(a) || isNaN(b)) {
+    return 'Одно или оба значения не являются числом';
+  }
+  
+  // Если оба параметра - числа, вернуть их произведение
+  return a * b;
+}
+
+// Примеры использования функции
+console.log(multiplyNumbers(5, 3)); // 15
+console.log(multiplyNumbers('ляляля', 3)); // Одно или оба значения не являются числом
+console.log(multiplyNumbers(2, 'жужужу')); // Одно или оба значения не являются числом
+console.log(multiplyNumbers(3,2));
+//task6
+function cube() {
+    let num=Number(prompt(`Загадай число`));
+    if (isNaN(num)) {
+        return `Переданный параметр числом не является`;
+    } else {
+        
+        let result = Math.pow(num,3);
+        return result;
+    }
+}
+console.log(cube());
+//task7
+let circle1 = {
+  radius: 5,
+  getArea: function() {
+    return Math.PI * this.radius * this.radius;
+  },
+  getPerimeter: function() {
+    return 2 * Math.PI * this.radius;
+  }
+};
+let circle2 = {
+  radius: 10,
+  getArea: function() {
+    return Math.PI * this.radius * this.radius;
+  },
+  getPerimeter: function() {
+    return 2 * Math.PI * this.radius;
+  }
+};
+console.log(circle1.getArea());
+console.log(circle1.getPerimeter());
+console.log(circle2.getArea());
+console.log(circle2.getPerimeter()); 
+</script>
+</body>
+</html>

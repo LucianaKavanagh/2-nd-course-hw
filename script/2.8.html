@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //2.8-task1
+const people = [
+   { name: 'Глеб', age: 29 },
+   { name: 'Анна', age: 17 },
+   { name: 'Олег', age: 7 },
+   { name: 'Оксана', age: 47 }
+];
+
+people.sort((a, b) => a.age - b.age); //<--callback, потому что функция передана в другую функцию в качестве параметра
+
+console.log(people);
+
+//2.8-task2
+//принимает элемент и возвращает true, если функция больше 0, и false, если меньше 0
+function isPositive(element) {
+return element > 0;
+}
+
+function isMale(person) {
+return person.gender === 'male';
+}
+//принимает массив и функцию-правило. Использует метод filter, чтобы создать новый массив, содержащий только возвращённые элементы true
+function filter(array, ruleFunction) {
+return array.filter(ruleFunction);
+}
+
+console.log(filter([3, -4, 1, 9], isPositive)); 
+
+const peopleTwo = [
+{name: 'Глеб', gender: 'male'},
+{name: 'Анна', gender: 'female'},
+{name: 'Олег', gender: 'male'},
+{name: 'Оксана', gender: 'female'}
+];
+
+console.log(filter(peopleTwo, isMale)); 
+//task3
+let count = 0;
+
+const intervalId = setInterval(() => {
+  const currentDate = new Date();
+  console.log(currentDate);
+
+  count += 3;
+
+  if (count >= 30) {
+    clearInterval(intervalId);
+    console.log("30 секунд прошло");
+  }
+}, 3000);
+//task4
+function delayForSecond(callback) {
+setTimeout(callback, 1000);
+callback();
+}
+
+delayForSecond(function () {
+console.log('Привет, Глеб!');
+})
+//task5
+// Функция delayForSecond через 1 секунду пишет в консоль «Прошла одна секунда», 
+// а затем вызывает переданный колбэк
+function delayForSecond(cb) {
+    setTimeout(() => {
+        console.log('Прошла одна секунда');
+				if(cb) { 	cb(); }
+
+    }, 1000)
+}
+
+// Функция sayHi выводит в консоль приветствие для указанного имени
+function sayHi (name) {
+    console.log(`Привет, ${name}!`);
+}
+
+delayForSecond(() => sayHi('Глеб')) //чтобы код работал по заданию sayHi нужно обернуть в анонимную функцию
+    </script>
+</body>
+</html>
