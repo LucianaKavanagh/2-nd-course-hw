@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1
+const phrase=('кошечка умывается лапкой').toLocaleUpperCase();
+console.log(phrase);
+//2
+function filterByPrefix(array, prefix) {
+let result = [];
+prefix = prefix.toLowerCase();
+for (let i = 0; i < array.length; i++) {
+let lowerCaseStr = array[i].toLowerCase();
+if (lowerCaseStr.startsWith(prefix)) {
+result.push(array[i]);
+}
+}
+return result;
+}
+let animals = ['Horses', 'Lioness', 'Tigress', 'Elephant', 'Tapir'];
+let filteredAnimals = filterByPrefix(animals, 't');
+
+console.log(filteredAnimals);
+//3
+let num = 32.58884;
+
+let floorNum = Math.floor(num);
+console.log(floorNum); // округление числа
+
+let ceilNum = Math.ceil(num);
+console.log(ceilNum); // округление до меньшего целого
+
+let roundNum = Math.round(num);
+console.log(roundNum); // округление до ближайшего целого
+//4
+const numArr = [52, 53, 49, 77, 21, 32];
+
+const min = Math.min(...numArr);
+const max = Math.max(...numArr);
+
+console.log(`Наименьшее число: ${min}`);
+console.log(`Наибольшее число: ${max}`);
+//5
+function randomNumber() {
+  const min = 1;
+  const max = 10;
+  const random = Math.floor(Math.random() * (max - min + 1)) + min;
+  console.log(random);
+}
+randomNumber();
+//6
+function randomNumbersArray(n) {
+  const result = [];
+
+  for (let i = 0; i < n / 2; i++) {
+    const random = Math.floor(Math.random() * (n + 1));
+    result.push(random);
+  }
+
+  return result;
+}
+const input = 7;
+const output = randomNumbersArray(input);
+console.log(output);
+//7
+function getRandomInteger(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+console.log(getRandomInteger(3, 15));
+console.log(getRandomInteger(-20, 0));
+//8
+const currentDate = new Date();
+const formattedDate = currentDate.toLocaleDateString();
+console.log(formattedDate);
+//9
+const currtDate = new Date();
+const futureDate = new Date(currtDate.getTime() + (73 * 24 * 60 * 60 * 1000));
+console.log(futureDate);
+//10
+function formatDate(date) {
+  const weekdays = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+  
+  // редактирование даты
+  const options = { day: 'numeric', month: 'long', year: 'numeric' };
+  const formattedDate = date.toLocaleDateString('ru-RU', options);
+  
+  // редактирование времени
+  const hours = String(date.getHours()).padStart(2, '0');
+  const minutes = String(date.getMinutes()).padStart(2, '0');
+  const seconds = String(date.getSeconds()).padStart(2, '0');
+  const formattedTime = `${hours}:${minutes}:${seconds}`;
+  
+  // возвращение новой даты и времени
+  const dayOfWeek = weekdays[date.getDay()];
+  return `Дата: ${formattedDate} - это ${dayOfWeek}\nВремя: ${formattedTime}`;
+}
+const date = new Date();
+const formattedDateTime = formatDate(date);
+console.log(formattedDateTime);
+//task11 задача из вёрстки
+function gameTwo() {
+  let arr = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+
+arr = arr.sort(() => Math.random() - 0.5);
+alert(arr);
+let questionOne = prompt(`Какой первый фрукт?`);
+let questionTwo = prompt(`Какой последний фрукт?`);
+if (questionOne===arr[0] && questionTwo=== arr[arr.length - 1]) {
+  alert(`Аплодисменты, ты супер-пупер!`);
+} 
+else if (questionOne === arr[0] || questionTwo === arr[arr.length - 1]) {
+  alert(`Вы были близки`);
+}
+else {
+alert(`Не угадал, попробуй ещё`); 
+}
+}
+    </script>
+</body>
+</html>
